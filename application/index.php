@@ -2,6 +2,8 @@
 error_reporting(-1);
 ini_set('display_errors', 'On');
 
+date_default_timezone_set('Europe/Dublin');
+
 require_once "lib/Smarty.class.php";
 require_once "database.php";
 

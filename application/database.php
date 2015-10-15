@@ -24,7 +24,7 @@ class Db {
     }
     
     //sets the datab to null
-    public function disconect() {
+    public function disconnect() {
         
         $this->con = null;
         
