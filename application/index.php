@@ -47,8 +47,10 @@ $template = new Smarty();
 
 if(isset($activeNoteId))
     $template->assign("ACTIVE_NOTE_ID", $activeNoteId);
+else 
+    $template->assign("ACTIVE_NOTE_ID", null);
 $template->assign("notes", $db->getNotes());
-$template->assign("instance_id", file_get_contents("http://169.254.169.254/latest/meta-data/instance-id"))
+//$template->assign("instance_id", file_get_contents("http://169.254.169.254/latest/meta-data/instance-id"))
 $template->display('index.tpl');
 
 //disconnect
